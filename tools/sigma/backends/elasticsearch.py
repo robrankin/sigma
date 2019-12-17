@@ -849,7 +849,7 @@ class ElastalertBackend(MultiRuleOutputMixin):
                         rule_object['query_key'] = self.fieldNameMapping(parsed.parsedAgg.groupfield, '*')
                     rule_object['type'] = "metric_aggregation"
                     rule_object['buffer_time'] = interval
-                    rule_object['doc_type'] = "doc"
+                    rule_object['doc_type'] = "_doc"
 
                     if parsed.parsedAgg.aggfunc == sigma.parser.condition.SigmaAggregationParser.AGGFUNC_COUNT:
                         rule_object['metric_agg_type'] = "cardinality"
